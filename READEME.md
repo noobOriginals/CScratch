@@ -1,0 +1,1 @@
+Include glfw.dll library alongside your executables in order to run this project
