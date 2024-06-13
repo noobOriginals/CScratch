@@ -1,9 +1,5 @@
-
-
-class SDrawable {
-public:
-    virtual void draw(Window window);
-};
+#ifndef UTILITIES_H_
+#define UTILITIES_H_
 
 struct Color {
     int r, g, b;
@@ -16,7 +12,5 @@ struct Color {
         r = g = b = 0;
     }
 };
-namespace color {
-    Color black = Color(0, 0, 0);
-    Color white = Color(1, 1, 1);
-}
+
+#endif

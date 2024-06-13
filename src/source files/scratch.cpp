@@ -20,7 +20,3 @@ Scratch::Scratch(string name, int width, int height, Color bgcolor, bool resizab
     window = Window(width, height, name);
     window.show();
 }
-
-void Scratch::addSDrawable(SDrawable sd) {
-    
-}

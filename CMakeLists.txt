@@ -18,6 +18,7 @@ set (IncludePath "${CMAKE_SOURCE_DIR}/src/headers")
 set (ResourcePath "${CMAKE_SOURCE_DIR}/src/resource files")
 
 include_directories(${PROJECT_NAME} ${IncludePath})
+include_directories(${PROJECT_NAME} ${SrcPath})
 include_directories(${PROJECT_NAME} $ENV{OPENGL_PATH})
 
 link_directories(${FullOutputDir})
@@ -25,7 +26,7 @@ link_directories(${FullOutputDir})
 add_library(graphics SHARED ${SrcPath}/window.cpp ${SrcPath}/image.cpp ${SrcPath}/glad.c ${SrcPath}/stb_image.cpp)
 target_link_libraries(graphics glfw3 opengl32)
 
-add_library(cScratch SHARED ${SrcPath}/scratch.cpp)
+add_library(cScratch SHARED ${SrcPath}/scratch.cpp ${SrcPath}/sprite.cpp ${SrcPath}/costume.cpp)
 target_link_libraries(cScratch graphics)
 
 add_executable(${PROJECT_NAME} ${SrcPath}/main.cpp)
